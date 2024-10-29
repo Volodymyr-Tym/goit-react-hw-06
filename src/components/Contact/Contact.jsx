@@ -1,12 +1,14 @@
 import { BiSolidUser } from 'react-icons/bi';
 import { MdOutlinePhoneIphone } from 'react-icons/md';
 
-import styles from './Contact.module.css';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from '../../redux/contactsSlice';
 
+import styles from './Contact.module.css';
+
 const Contact = ({ user }) => {
   const { name, number, id } = user;
+
   const dispatch = useDispatch();
 
   const nameFormater = fullName => {

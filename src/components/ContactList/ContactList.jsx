@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { selectContacts } from '../../redux/contactsSlice';
 import { selectNameFilter } from '../../redux/filtersSlice';
+
 import Contact from '../Contact/Contact';
 
 import styles from './ContactList.module.css';
@@ -22,10 +23,6 @@ const ContactList = () => {
       {contacts.length !== 0 && filteredContacts.length === 0 && (
         <h3>There are no matches</h3>
       )}
-
-      {/*//? {contacts.length && filteredContacts.length === 0 && (
-        <h3>There are no matches</h3>
-      )} */}
 
       <ul className={styles.user_list}>
         {filteredContacts.map(user => {

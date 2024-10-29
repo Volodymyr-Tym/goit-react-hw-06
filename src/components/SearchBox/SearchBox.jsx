@@ -1,12 +1,15 @@
 import { ImSearch } from 'react-icons/im';
 
-import styles from './SearchBox.module.css';
 import { selectNameFilter, changeFilter } from '../../redux/filtersSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
+import styles from './SearchBox.module.css';
+
 const SearchBox = () => {
   const filter = useSelector(selectNameFilter);
+
   const dispatch = useDispatch();
+
   const handleChange = searchedValue => {
     dispatch(changeFilter(searchedValue));
   };
